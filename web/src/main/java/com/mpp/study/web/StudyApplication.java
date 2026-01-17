@@ -1,11 +1,12 @@
 package com.mpp.study.web;
 
+import com.mpp.study.mongodb.repositories.CharacterRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
-@EnableMongoRepositories
+@EnableMongoRepositories(basePackageClasses = CharacterRepository.class)
 public class StudyApplication {
 
     public static void main(String[] args) {
