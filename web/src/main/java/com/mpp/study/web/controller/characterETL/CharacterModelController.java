@@ -19,6 +19,6 @@ public class CharacterModelController {
 
     @GetMapping("/{name}")
     public CharacterModel find(@PathVariable String name) {
-        return characterSearchService.searchCharacter(name);
+        return characterSearchService.searchCharacterByName(name);
     }
 }
